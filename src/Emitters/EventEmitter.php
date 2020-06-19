@@ -24,7 +24,7 @@ class EventEmitter implements EventEmitterInterface
     public function emit(array $data, int $event): void
     {
         if (in_array($event, $this->map, true)) {
-            (new $this->map[$event])->emit($data);
+            (new $this->map[$event]())->emit($data);
         }
     }
 
@@ -40,7 +40,7 @@ class EventEmitter implements EventEmitterInterface
          */
         foreach ($this->map as $id => $event) {
             if ($mask & $id) {
-                (new $event)->emit($data);
+                (new $event())->emit($data);
             }
         }
     }
