@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="Events4Friends Test Suite">
+        <testsuite name="Events Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
